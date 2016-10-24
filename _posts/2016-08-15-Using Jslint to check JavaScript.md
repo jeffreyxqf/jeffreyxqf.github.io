@@ -6,6 +6,12 @@ tags: JavaScript Jslint
 categories: JavaScript
 ---
 
+本文主要介绍了利用jslint来检测JavaScript 的实现是否规范正确的方法
+
+
+
+
+
     public static void main(String[] args) throws IOException {
         JSLintBuilder builder = new JSLintBuilder();
 
