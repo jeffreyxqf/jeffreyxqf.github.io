@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Coding Dos To Linux  Using Command & Ant Task
-category: Technologies
-comments: true
+tags: Linux　Ant
+category: Linux
 ---
 
 最近在将工程放在Linux环境中遇到个问题，在window编辑的shell 放在Linux环境中会将换行符转义成^M,

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Auto Post Messages to Slack & Upload Files to Box
-category: Technologies
+tags: DevOps Slack Box cURL
+category: DevOps
 comments: true
 ---
 

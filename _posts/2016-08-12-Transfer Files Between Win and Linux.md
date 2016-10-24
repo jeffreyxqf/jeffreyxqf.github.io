@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Transfer Files Between Win & Linux
-category: Technologies
+tags: Linux
+category: Linux
 ---
 
 - Windows ——> Linux
