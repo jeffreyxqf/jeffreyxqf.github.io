@@ -2,7 +2,7 @@
 layout: post
 title:    "Using Jslint to check JavaScript"
 date:   2016-08-15 19:40:47 +0800
-tags:JavaScript Jslint
+tags: JavaScript Jslint
 categories: JavaScript
 ---
 
