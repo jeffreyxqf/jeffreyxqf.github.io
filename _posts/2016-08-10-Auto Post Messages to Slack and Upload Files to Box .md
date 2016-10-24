@@ -6,7 +6,12 @@ category: DevOps
 comments: true
 ---
 
+本文主要介绍了利用curl命令，结合Box,Slack的API，实现自动发布自定义的message给特定的Slack Chanel，以及自动上传文件至Box。
 Use Box & Slack API to Upload Files or Post messages without acessing the website.
+
+
+
+
 
 - Send Message to Slack :
 
