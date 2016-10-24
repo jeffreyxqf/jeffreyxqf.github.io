@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Tomcat Auto Redeploy Application
-category: Technologies
+tags:Tomcat 
+category: Tomcat
 comments: true
 ---
 
