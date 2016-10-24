@@ -2,7 +2,8 @@
 layout: post
 title:    "Synchronized and singleton"
 date:   2016-07-27 20:00:47 +0800
-categories: Technologies
+tags: Java 并发 SingleTon
+categories: Java
 ---
 
 
