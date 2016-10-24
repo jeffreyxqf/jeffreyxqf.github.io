@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Coding Dos To Linux  Using Command & Ant Task
-category: Technologies
+tags:Linux　Ant
+category: Linux
 comments: true
 ---
 
