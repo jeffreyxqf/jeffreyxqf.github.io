@@ -5,18 +5,10 @@ date:   2016-07-27 20:00:47 +0800
 tags: Java 并发 SingleTon
 categories: Java
 ---
+本文主要介绍了几种利用Synchronized关键字实现线程安全单例模式的几种情况，比较其利弊。
 
 
-###  Synchronized 
-```java  
-public class UnsafeSequence {
-    private int value;
-    public int getNext() {
-       return value++;
-    }
-}
-```
-![AB](https://jeffreyxqf.github.io/images/i%20Plus.png)
+
 
 
 >- Thread Safety & Singleton 
