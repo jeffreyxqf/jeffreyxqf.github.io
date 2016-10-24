@@ -8,6 +8,11 @@ category: Tomcat
 
 利用Jenkins与Tomcat集成发布release，自动deploye最新的项目运行在Tomcat中，在deploye的过程中会涉及到工程项目的删除，但是Tomcat CMD 仍处于运行状态，导致旧的工程无法删除，无法部署最新的项目至serve中. 这是就需要对tomcat的相关参数进行配置
 
+
+
+
+
+
 在${Tomcat_Home}/conf/context.xml 中， 应添加属性antiResourceLocking="true"， antiJARLocking="true" .
 
 >       
