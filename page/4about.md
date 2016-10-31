@@ -14,7 +14,7 @@ icon: heart
 
 ## 联系我
 
-* email：jeffreyxqf@163.com
+![](http://i.imgur.com/PlZK8vc.png) [jeffreyxqf@163.com](jeffreyxqf@163.com)
 
 
 ## 友情链接
