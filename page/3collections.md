@@ -33,6 +33,7 @@ icon: bookmark
 
 * [http://calvin1978.blogcn.com/](http://calvin1978.blogcn.com/ "花钱的年华") 
 * [http://www.jianshu.com/users/tnmZrp/latest_articles](http://www.jianshu.com/users/tnmZrp/latest_articles)
+* [http://www.hifreud.com/](http://www.hifreud.com/ "Mr Freud")
 
 ## Comments
 
