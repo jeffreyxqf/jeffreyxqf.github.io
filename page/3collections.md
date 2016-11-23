@@ -16,6 +16,7 @@ icon: bookmark
 - [慕课网](http://www.imooc.com/ "慕课网")
 - [极客头条](http://geek.csdn.net/ "极客头条")
 - [江南白衣](http://calvin1978.blogcn.com/ "江南白衣")
+- [http://www.infoq.com/cn/](http://www.infoq.com/cn/)
 
 ## 不错的公众号
 - 中生代技术
