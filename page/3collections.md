@@ -27,14 +27,19 @@ icon: bookmark
      ![](http://i.imgur.com/zOcymYR.png)
 
 ## 工具
+- typeAndRun
+
+[http://totalcmd.net/plugring/TypeAndRun.html](http://totalcmd.net/plugring/TypeAndRun.html)
+
 
 ## 编程语言
 - JAVA
         
-     spring 框架学习
+  Spring 框架学习
 
-     [https://www.tutorialspoint.com/spring/index.htm](https://www.tutorialspoint.com/spring/index.htm)(EN)
-     [http://wiki.jikexueyuan.com/project/spring](http://wiki.jikexueyuan.com/project/spring)(CH)
+ [https://www.tutorialspoint.com/spring/index.htm](https://www.tutorialspoint.com/spring/index.htm)(EN)
+
+ [http://wiki.jikexueyuan.com/project/spring](http://wiki.jikexueyuan.com/project/spring)(CH)
 
 ## Other blogs
 
