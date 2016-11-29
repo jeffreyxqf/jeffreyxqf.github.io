@@ -24,7 +24,6 @@ icon: bookmark
 - 中生代技术
      ![](http://i.imgur.com/Xo2fLLa.png)
 - 美团点评技术团队
-
      ![](http://i.imgur.com/zOcymYR.png)
 
 
