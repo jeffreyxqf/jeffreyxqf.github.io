@@ -16,11 +16,9 @@ icon: bookmark
 - [慕课网](http://www.imooc.com/ "慕课网")
 - [极客头条](http://geek.csdn.net/ "极客头条")
 - [江南白衣](http://calvin1978.blogcn.com/ "江南白衣")
-<<<<<<< HEAD
 - [简单教程](https://www.gitbook.com)
-=======
 - [infoq](http://www.infoq.com/cn/)
->>>>>>> 53f6d63ecebff07e21237d5165f019842c0b9085
+
 
 ### 不错的公众号
 - 中生代技术
@@ -29,11 +27,11 @@ icon: bookmark
 
      ![](http://i.imgur.com/zOcymYR.png)
 
-<<<<<<< HEAD
+
 ### 工具
 
 ### 编程语言
-=======
+
 ## 工具
 - typeAndRun
 
@@ -48,7 +46,6 @@ icon: bookmark
  [https://www.tutorialspoint.com/spring/index.htm](https://www.tutorialspoint.com/spring/index.htm)(EN)
 
  [http://wiki.jikexueyuan.com/project/spring](http://wiki.jikexueyuan.com/project/spring)(CH)
->>>>>>> 53f6d63ecebff07e21237d5165f019842c0b9085
 
 ### Other blogs
 
