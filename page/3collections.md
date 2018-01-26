@@ -9,9 +9,12 @@ icon: bookmark
 {:toc}
 
 ### 一些好的书籍
-
+#### Java
 [http://calvin1978.blogcn.com/articles/javabookshelf.html](http://calvin1978.blogcn.com/articles/javabookshelf.html)
+#### Hadoop
+Hadoop 权威指南（The Definitive Guide）看title就知道是学习Hadoop必备书籍
 
+Hadoop in action
 ### 一些好网站
 - [慕课网](http://www.imooc.com/ "慕课网")
 - [极客头条](http://geek.csdn.net/ "极客头条")
@@ -33,14 +36,26 @@ icon: bookmark
 ![](http://i.imgur.com/zOcymYR.png)
 
 
-### 工具
+### 常用的工具 
 
-### 编程语言
+- TypeAndRun （快速启动应用程序）
+ [http://totalcmd.net/plugring/TypeAndRun.html](http://totalcmd.net/plugring/ TypeAndRun.html)
+- Evernote 印象笔记， Mac上也是必备
 
-## 工具
-- typeAndRun
+- Putty ( 常用的SSH and telnet client) [https://www.putty.org/] (https://www.putty.org/)
 
-[http://totalcmd.net/plugring/TypeAndRun.html](http://totalcmd.net/plugring/TypeAndRun.html)
+- Total Commander [http://www.ghisler.com/] (http://www.ghisler.com/)
+- File Zilla (Mac)[https://filezilla-project.org/] (https://filezilla-project.org/)
+- Markdown Pad
+- sublime text 3
+
+- Intellij IDEA， Eclipse  
+
+- VMWare
+
+- Dr.Cleaner (mac 必备清理软件)
+
+- MacDown （一款不错的mac开源markdown编写工具）
 
 
 ## 编程语言
