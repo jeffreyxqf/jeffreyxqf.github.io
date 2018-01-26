@@ -42,9 +42,11 @@ Hadoop in action
  [http://totalcmd.net/plugring/TypeAndRun.html](http://totalcmd.net/plugring/ TypeAndRun.html)
 - Evernote 印象笔记， Mac上也是必备
 
-- Putty ( 常用的SSH and telnet client) [https://www.putty.org/] (https://www.putty.org/)
+- Putty ( 常用的SSH and telnet client) 
+[https://www.putty.org/] (https://www.putty.org/)
 
-- Total Commander [http://www.ghisler.com/] (http://www.ghisler.com/)
+- Total Commander 
+[http://www.ghisler.com/] (http://www.ghisler.com "Title")
 - File Zilla (Mac)[https://filezilla-project.org/] (https://filezilla-project.org/)
 - Markdown Pad
 - sublime text 3
