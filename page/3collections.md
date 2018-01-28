@@ -36,7 +36,7 @@ Hadoop in action
 ![](http://i.imgur.com/zOcymYR.png)
 
 
-### 常用的工具 
+### 常用的工具  
 
 - TypeAndRun （快速启动应用程序）
  [http://totalcmd.net/plugring/TypeAndRun.html](http://totalcmd.net/plugring/ TypeAndRun.html)
@@ -46,8 +46,10 @@ Hadoop in action
  [https://www.putty.org](https://www.putty.org)
 
 - Total Commander 
-[http://www.ghisler.com] (http://www.ghisler.com)
-- File Zilla (Mac)[https://filezilla-project.org] (https://filezilla-project.org/)
+ [http://www.ghisler.com] (http://www.ghisler.com)
+ 
+- File Zilla (Mac)
+ [https://filezilla-project.org] (https://filezilla-project.org/)
 - Markdown Pad
 - sublime text 3
 
@@ -59,6 +61,7 @@ Hadoop in action
 
 - MacDown （一款不错的mac开源markdown编写工具）
 
+- TotalFinder (mac 使用很好的文件管理软件)
 
 ## 编程语言
 - JAVA
