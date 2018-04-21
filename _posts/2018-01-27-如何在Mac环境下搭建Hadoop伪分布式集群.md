@@ -5,7 +5,7 @@ date:  2018-01-27 09:12 +0800
 tags: Hadoop 分布式 大数据
 categories: Hadoop
 ---
-最近尝试在mac上搭建Hadoop集群，发现资料不是很多，加之自己也是刚刚接触mac操作系统，对一些操作以及网络配置不是很熟悉，在搭建过程中遇到了一些/Users/jeffrey困难。利用下班后的时间，花了2个晚上终于顺利的将集群搭建了起来，整理了这篇文章，希望可以对读者有所启发。
+最近尝试在mac上搭建Hadoop集群，发现资料不是很多，加之自己也是刚刚接触mac操作系统，对一些操作以及网络配置不是很熟悉，在搭建过程中遇到了一些困难。利用下班后的时间，花了2个晚上终于顺利的将集群搭建了起来，整理了这篇文章，希望可以对读者有所启发。
 
 ---
 
@@ -27,16 +27,21 @@ categories: Hadoop
 
 在VMware上安装3台虚拟机，即一个master主机，2个slave。安装过程比较简单，在此就不详细叙述了。 不过需要注意的是，在安装虚拟机的过程中，启动时可能会出现了cannot find /dev/common 等类似的错误，Google了下，可能缘于VMware版本与mac操作系统不兼容导致的Linux安装不成功的问题，本人使用了最新版的VMware 10.1.0 版本 以及Linux 2.6版本安装成功。
 
-- ##### 网络配置 
+##### 网络配置 
 
  nat模式 固定ip配置 
  
 ##### 1.本机操作
  VMware安装完成后，在本机终端找到其对应的网络配置：
+ 
+ ![jeffreyxqf.github.io/source/hadoop/VM Net.png](jeffreyxqf.github.io/source/hadoop/VM Net.png)
+
  可以看到VMnet8 子网IP地址为：192.168.236.0
  
   获取getaway address ： 
   
+ ![jeffreyxqf.github.io/source/hadoop/Getway.png](jeffreyxqf.github.io/source/hadoop/Getway.png)
+ 
   可以看到网关地址为： 192.168.236.2
   
 ##### 2.虚拟机操作 静态ip地址设置（在虚拟机上完成）：
@@ -46,24 +51,26 @@ categories: Hadoop
   
   当然也可以使用界面配置，如： 
   
+ ![jeffreyxqf.github.io/source/hadoop/Linux net configuration.png](jeffreyxqf.github.io/source/hadoop/Linux net configuration.png)
   
 ##### 3.修改host文件 
 
    vim /etc/hosts
    
-		   127.0.0.1	localhost
-			255.255.255.255	broadcasthost
-			::1             localhost
-			192.168.236.100 master
-			192.168.236.101 slave1
-			192.168.236.102 slave2   
+	   127.0.0.1	localhost
+		255.255.255.255	broadcasthost
+		::1             localhost
+		192.168.236.100 master
+		192.168.236.101 slave1
+		192.168.236.102 slave2   
 			
   主机虚拟机一样操作，让其能找到对方。。。
    
    测试 ： 
    
+   ![jeffreyxqf.github.io/source/hadoop/ping.png](jeffreyxqf.github.io/source/hadoop/ping.png)
    
-	可以看到主机与虚拟机，虚拟机之间已实现了互联，自己摸索，不一定是最佳实践哈。。。
+可以看到主机与虚拟机，虚拟机之间已实现了互联，自己摸索，不一定是最佳实践哈。。。
 	
 ### JDK 的安装与配置
 
@@ -87,9 +94,10 @@ categories: Hadoop
 ### Hadoop 的安装与配置
 #####  1. 下载
    我使用的是Hadoop 2.7.5 版本，可以直接从官网下载 ： 
-    http://www.apache.org/dyn/closer.cgi/hadoop/common/ ，当然也可以使用镜像下载。
+    [http://www.apache.org/dyn/closer.cgi/hadoop/common/](http://www.apache.org/dyn/closer.cgi/hadoop/common/) ，当然也可以使用镜像下载。
     
 附上自己的Hadoop： 
+
 链接:[https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg](https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg) 密码:99c7
     
 #####  2. 创建工作目录，方便管理NameNode/DataNode/以及零时文件
@@ -97,9 +105,12 @@ categories: Hadoop
     /data/hdfs/data
     /data/hdfs/tmp  
     
-将下载好的Hadoop解压至/data目录 ： tar -zxvf hadoop-2.7.5.tar.gz
+将下载好的Hadoop解压至/data目录 ： 
+
+    tar -zxvf hadoop-2.7.5.tar.gz
   
 #####   3. 配置环境变量 
+
 	   vim /etc/profile
 	   export HADOOP_HOME=/data/hadoop-2.7.5
 	   export JAVA_HOME=/usr/local/jdk1.8.0_161
@@ -109,11 +120,13 @@ categories: Hadoop
   source /etc/profile 使配置立即生效
   测试 hadoop 
   
+  ![jeffreyxqf.github.io/source/hadoop/hadoop test.png](jeffreyxqf.github.io/source/hadoop/hadoop test.png)
+  
 #####   4. Hadoop 配置
   
   进入Hadoop-2.7.5目录 ：  
   
-  cd /data/hadoop-2.7.5/etc/hadoop
+     cd /data/hadoop-2.7.5/etc/hadoop
   
   修改文件 core-site.xml、hdfs-site.xml、mapred-site.xml、yarn-site.xml以及slaves文件。
   
@@ -145,6 +158,7 @@ categories: Hadoop
 		 <value>*</value>
 		</property>
 		</configuration> 
+		
    hadoop.tmp.dir 目录设置为上文创建的tmp目录。 
    
 ###### b. 修改vim hdfs-site.xml
@@ -178,7 +192,7 @@ categories: Hadoop
 				  <name>dfs.permissions</name>
 				  <value>false</value>
 				</property>
-				</configuration>  
+		</configuration>  
 
 
 ######  c. 修改vim yarn-site.xml
@@ -234,22 +248,27 @@ categories: Hadoop
 ######   e.  修改slaves主机名
      
      vim /data/hadoop-2.7.5/etc/hadoop/slaves
-     将其中的localhost删除改为slave1，slave2 。 
-     最后，将整个hadoop-2.7.5文件夹及其子文件夹复制到slave1和slave2的相同目录中。
+     
+将其中的localhost删除改为slave1，slave2 。 
+最后，将整个hadoop-2.7.5文件夹及其子文件夹复制到slave1和slave2的相同目录中。
      
 #### 运行Hadoop
 
 1. 格式化NameNode
      
-     hadoop namenode -format
+        hadoop namenode -format
      
+ ![jeffreyxqf.github.io/source/hadoop/dfs.png](jeffreyxqf.github.io/source/hadoop/dfs.png)
+ 
 2. 启动NameNode     
      
-     /data/hadoop-2.7.5/sbin/hadoop-daemons.sh start datanode
+        /data/hadoop-2.7.5/sbin/hadoop-daemons.sh start datanode
 3. 启动DataNode
     
-    /data/hadoop-2.7.1/sbin/hadoop-daemons.sh start datanode
+        /data/hadoop-2.7.1/sbin/hadoop-daemons.sh start datanode
 当然1，2，3操作可以使用start-dfs.sh
+
+ ![jeffreyxqf.github.io/source/hadoop/start-all.png](jeffreyxqf.github.io/source/hadoop/start-all.png)
 
 4,运行YARN
    
@@ -272,14 +291,20 @@ categories: Hadoop
 
 1. 查看集群状态
         
-      /data/hadoop-2.7.5/bin/hdfs dfsadmin -report
-2. 测试yarn
+        /data/hadoop-2.7.5/bin/hdfs dfsadmin -report
+   
+   ![jeffreyxqf.github.io/source/hadoop/report.png](jeffreyxqf.github.io/source/hadoop/report.png)
+2. 测试yarn,访问管理界面
 
-     访问管理界面 master:18088/cluster
+        master:18088/cluster
+  
+  ![jeffreyxqf.github.io/source/hadoop/yarn.png](jeffreyxqf.github.io/source/hadoop/yarn.png)
     
 3. 测试查看HDFS
     
-     http://master:50070/dfshealth.html
+        http://master:50070/dfshealth.html
+ 
+ ![jeffreyxqf.github.io/source/hadoop/dfs.png](jeffreyxqf.github.io/source/hadoop/dfs.png)
  
 #### 安装Hadoop遇到的问题
     
@@ -293,13 +318,17 @@ categories: Hadoop
 
 Log ： 
 
+![jeffreyxqf.github.io/source/hadoop/node error.png](jeffreyxqf.github.io/source/hadoop/node error.png)
 
 解决 ： 
 
+将yarn.nodemanager.aux-services项的值改为“mapreduce_shuffle”
 
 ###### 3. Stop Namenode/datanode 异常
  no xxx to stop
 
+ ![jeffreyxqf.github.io/source/hadoop/no ** stop.png](jeffreyxqf.github.io/source/hadoop/no ** stop.png)
+ 
  http://blog.csdn.net/GYQJN/article/details/50805472
 
 
