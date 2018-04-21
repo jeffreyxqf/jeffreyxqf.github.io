@@ -247,34 +247,34 @@ categories: Hadoop
 
 ######   e.  修改slaves主机名
      
-     vim /data/hadoop-2.7.5/etc/hadoop/slaves
+    vim /data/hadoop-2.7.5/etc/hadoop/slaves
      
 将其中的localhost删除改为slave1，slave2 。 
 最后，将整个hadoop-2.7.5文件夹及其子文件夹复制到slave1和slave2的相同目录中。
      
 #### 运行Hadoop
 
-1. 格式化NameNode
+#####  1. 格式化NameNode
      
         hadoop namenode -format
      
  ![jeffreyxqf.github.io/source/hadoop/dfs.png](jeffreyxqf.github.io/source/hadoop/dfs.png)
  
-2. 启动NameNode     
+#####  2. 启动NameNode     
      
         /data/hadoop-2.7.5/sbin/hadoop-daemons.sh start datanode
-3. 启动DataNode
+#####  3. 启动DataNode
     
         /data/hadoop-2.7.1/sbin/hadoop-daemons.sh start datanode
 当然1，2，3操作可以使用start-dfs.sh
 
  ![jeffreyxqf.github.io/source/hadoop/start-all.png](jeffreyxqf.github.io/source/hadoop/start-all.png)
 
-4,运行YARN
+#####  4,运行YARN
    
     /data/hadoop-2.7.1/sbin/start-all.sh
     
-5，查看是否成功
+#####  5，查看是否成功
 
 	   jps
 	   
@@ -304,7 +304,7 @@ categories: Hadoop
     
         http://master:50070/dfshealth.html
  
- ![jeffreyxqf.github.io/source/hadoop/dfs.png](jeffreyxqf.github.io/source/hadoop/dfs.png)
+ ![](jeffreyxqf.github.io/source/hadoop/dfs.png)
  
 #### 安装Hadoop遇到的问题
     
@@ -327,7 +327,7 @@ Log ：
 ###### 3. Stop Namenode/datanode 异常
  no xxx to stop
 
- ![jeffreyxqf.github.io/source/hadoop/no ** stop.png](jeffreyxqf.github.io/source/hadoop/no ** stop.png)
+ ![](jeffreyxqf.github.io/source/hadoop/no ** stop.png)
  
  http://blog.csdn.net/GYQJN/article/details/50805472
 
