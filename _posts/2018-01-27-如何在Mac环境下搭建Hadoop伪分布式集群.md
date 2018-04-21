@@ -31,7 +31,7 @@ categories: Hadoop
 
  nat模式 固定ip配置 
  
- ##### 1.本机操作
+##### 1.本机操作
  VMware安装完成后，在本机终端找到其对应的网络配置：
  可以看到VMnet8 子网IP地址为：192.168.236.0
  
@@ -39,7 +39,7 @@ categories: Hadoop
   
   可以看到网关地址为： 192.168.236.2
   
- ##### 2.虚拟机操作 静态ip地址设置（在虚拟机上完成）：
+##### 2.虚拟机操作 静态ip地址设置（在虚拟机上完成）：
   
   可以看到，master虚拟机ip地址设置成192.168.236.100
   Getaway与主机相同。 两个slaves ip地址分别设置为192.168.236.101，192.168.236.102.
@@ -47,7 +47,8 @@ categories: Hadoop
   当然也可以使用界面配置，如： 
   
   
-  ##### 3.修改host文件 
+##### 3.修改host文件 
+
    vim /etc/hosts
    
 		   127.0.0.1	localhost
@@ -56,7 +57,8 @@ categories: Hadoop
 			192.168.236.100 master
 			192.168.236.101 slave1
 			192.168.236.102 slave2   
-   主机虚拟机一样操作，让其能找到对方。。。
+			
+  主机虚拟机一样操作，让其能找到对方。。。
    
    测试 ： 
    
@@ -66,14 +68,17 @@ categories: Hadoop
 ### JDK 的安装与配置
 
 ##### 1. 下载，上传，解压，安装 比较简单不再详述
+
 ##### 2. 配置环境变量
      vim /etc/profile 
      
 	export JAVA_HOME=/usr/local/jdk1.8.0_161
 	export CLASSPATH=$JAVA_HOME/lib:$JAVA_HOME/jre/lib
 	export PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin    
+	
 ##### 3. 重新加载/etc/profile,使配置立即生效
      source /etc/profile
+     
 ##### 4. 测试
     echo $PATH
     java -version 
@@ -83,14 +88,17 @@ categories: Hadoop
 #####  1. 下载
    我使用的是Hadoop 2.7.5 版本，可以直接从官网下载 ： 
     http://www.apache.org/dyn/closer.cgi/hadoop/common/ ，当然也可以使用镜像下载。
-    附上自己的Hadoop： 
-    链接:https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg  密码:99c7
+    
+附上自己的Hadoop： 
+链接:[https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg](https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg) 密码:99c7
     
 #####  2. 创建工作目录，方便管理NameNode/DataNode/以及零时文件
     /data/hdfs/name
     /data/hdfs/data
     /data/hdfs/tmp  
-  将下载好的Hadoop解压至/data目录 ： tar -zxvf hadoop-2.7.5.tar.gz
+    
+将下载好的Hadoop解压至/data目录 ： tar -zxvf hadoop-2.7.5.tar.gz
+  
 #####   3. 配置环境变量 
 	   vim /etc/profile
 	   export HADOOP_HOME=/data/hadoop-2.7.5
@@ -103,7 +111,10 @@ categories: Hadoop
   
 #####   4. Hadoop 配置
   
-  进入Hadoop-2.7.5目录 ：  cd /data/hadoop-2.7.5/etc/hadoop
+  进入Hadoop-2.7.5目录 ：  
+  
+  cd /data/hadoop-2.7.5/etc/hadoop
+  
   修改文件 core-site.xml、hdfs-site.xml、mapred-site.xml、yarn-site.xml以及slaves文件。
   
 ######    a. 修改core-site.xml :  
