@@ -9,7 +9,7 @@ categories: Hadoop
 
 ---
 
-###系统环境
+### 系统环境
 
        本机 ：  MacBook Pro  系统10.13
         VM ：  VMware FUsion 10.1.0
@@ -17,8 +17,12 @@ categories: Hadoop
        Hadoop: Version 2.7.5
        JDK :   1.8.0_161
 
+
+
+
+
        
-###系统准备
+### 系统准备
 #### VMware与Linux集群系统安装
 
 在VMware上安装3台虚拟机，即一个master主机，2个slave。安装过程比较简单，在此就不详细叙述了。 不过需要注意的是，在安装虚拟机的过程中，启动时可能会出现了cannot find /dev/common 等类似的错误，Google了下，可能缘于VMware版本与mac操作系统不兼容导致的Linux安装不成功的问题，本人使用了最新版的VMware 10.1.0 版本 以及Linux 2.6版本安装成功。
@@ -27,7 +31,7 @@ categories: Hadoop
 
  nat模式 固定ip配置 
  
- #####1.本机操作
+ ##### 1.本机操作
  VMware安装完成后，在本机终端找到其对应的网络配置：
  可以看到VMnet8 子网IP地址为：192.168.236.0
  
@@ -35,7 +39,7 @@ categories: Hadoop
   
   可以看到网关地址为： 192.168.236.2
   
- #####2.虚拟机操作 静态ip地址设置（在虚拟机上完成）：
+ ##### 2.虚拟机操作 静态ip地址设置（在虚拟机上完成）：
   
   可以看到，master虚拟机ip地址设置成192.168.236.100
   Getaway与主机相同。 两个slaves ip地址分别设置为192.168.236.101，192.168.236.102.
@@ -43,7 +47,7 @@ categories: Hadoop
   当然也可以使用界面配置，如： 
   
   
-  #####3.修改host文件 
+  ##### 3.修改host文件 
    vim /etc/hosts
    
 		   127.0.0.1	localhost
@@ -224,14 +228,14 @@ categories: Hadoop
      
 #### 运行Hadoop
 
-1,格式化NameNode
+1. 格式化NameNode
      
      hadoop namenode -format
      
-2,启动NameNode     
+2. 启动NameNode     
      
      /data/hadoop-2.7.5/sbin/hadoop-daemons.sh start datanode
-3,启动DataNode
+3. 启动DataNode
     
     /data/hadoop-2.7.1/sbin/hadoop-daemons.sh start datanode
 当然1，2，3操作可以使用start-dfs.sh
@@ -253,28 +257,28 @@ categories: Hadoop
 	　　NodeManager
 	　　DataNode
 
-- 测试Hadoop
+### 测试Hadoop
 
-1，查看集群状态
+1. 查看集群状态
         
       /data/hadoop-2.7.5/bin/hdfs dfsadmin -report
-2，测试yarn
+2. 测试yarn
 
      访问管理界面 master:18088/cluster
     
-3，测试查看HDFS
+3. 测试查看HDFS
     
-    http://master:50070/dfshealth.html
+     http://master:50070/dfshealth.html
  
 #### 安装Hadoop遇到的问题
     
-###### 1. JAVA_HOME未设置？
+######  1. JAVA_HOME未设置？
 
 启动的时候报: JAVA_HOME is not set and could not be found
 
 则需要/data/hadoop-2.7.1/etc/hadoop/hadoop-env.sh，添加JAVA_HOME路径
 
-######2. slave node ， 运行 yarn 后jps node manager 没有启动 。 
+###### 2. slave node ， 运行 yarn 后jps node manager 没有启动 。 
 
 Log ： 
 
@@ -282,7 +286,7 @@ Log ：
 解决 ： 
 
 
-######3. Stop Namenode/datanode 异常
+###### 3. Stop Namenode/datanode 异常
  no xxx to stop
 
  http://blog.csdn.net/GYQJN/article/details/50805472
@@ -292,8 +296,7 @@ Log ：
 
 参考资料：
 
-[docs.hortonworks.com]
-(https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.3.0/bk_installing_manually_book/content/ch_setting_up_hadoop_configuration_chapter.html)
+[docs.hortonworks.com](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.3.0/bk_installing_manually_book/content/ch_setting_up_hadoop_configuration_chapter.html)
 
 [http://hadoop.apache.org/docs/r1.2.1/api/org/apache/hadoop/conf/Configuration.html](http://hadoop.apache.org/docs/r1.2.1/api/org/apache/hadoop/conf/Configuration.html)
 
