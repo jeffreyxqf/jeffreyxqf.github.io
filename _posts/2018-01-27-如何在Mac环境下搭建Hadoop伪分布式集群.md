@@ -44,9 +44,9 @@ categories: Hadoop
  
   可以看到网关地址为： 192.168.236.2
   
-##### 2.虚拟机操作 静态ip地址设置（在虚拟机上完成）：
+##### 2.虚拟机操作 ：
   
-  可以看到，master虚拟机ip地址设置成192.168.236.100
+  静态ip地址设置（在虚拟机上完成），可以看到，master虚拟机ip地址设置成192.168.236.100
   Getaway与主机相同。 两个slaves ip地址分别设置为192.168.236.101，192.168.236.102.
   
   当然也可以使用界面配置，如： 
@@ -74,9 +74,12 @@ categories: Hadoop
 	
 ### JDK 的安装与配置
 
-##### 1. 下载，上传，解压，安装 比较简单不再详述
+##### 1. 下载安装 
+
+比较简单不再详述
 
 ##### 2. 配置环境变量
+
      vim /etc/profile 
      
 	export JAVA_HOME=/usr/local/jdk1.8.0_161
@@ -93,6 +96,7 @@ categories: Hadoop
  
 ### Hadoop 的安装与配置
 #####  1. 下载
+
    我使用的是Hadoop 2.7.5 版本，可以直接从官网下载 ： 
     [http://www.apache.org/dyn/closer.cgi/hadoop/common/](http://www.apache.org/dyn/closer.cgi/hadoop/common/) ，当然也可以使用镜像下载。
     
@@ -101,6 +105,9 @@ categories: Hadoop
 链接:[https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg](https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg) 密码:99c7
     
 #####  2. 创建工作目录，方便管理NameNode/DataNode/以及零时文件
+
+创建工作目录，方便管理NameNode/DataNode/以及零时文件
+
     /data/hdfs/name
     /data/hdfs/data
     /data/hdfs/tmp  
@@ -252,17 +259,17 @@ categories: Hadoop
 将其中的localhost删除改为slave1，slave2 。 
 最后，将整个hadoop-2.7.5文件夹及其子文件夹复制到slave1和slave2的相同目录中。
      
-#### 运行Hadoop
+### 运行Hadoop
 
-#####  1. 格式化NameNode
+####  1. 格式化NameNode
      
         hadoop namenode -format
       
-#####  2. 启动NameNode     
+####  2. 启动NameNode     
      
         /data/hadoop-2.7.5/sbin/hadoop-daemons.sh start datanode
 	
-#####  3. 启动DataNode
+####  3. 启动DataNode
     
         /data/hadoop-2.7.1/sbin/hadoop-daemons.sh start datanode
 	
@@ -270,11 +277,11 @@ categories: Hadoop
 
  ![ ](https://jeffreyxqf.github.io/source/hadoop/start-all.png)
 
-#####  4. 运行YARN
+####  4. 运行YARN
    
     /data/hadoop-2.7.1/sbin/start-all.sh
     
-#####  5. 查看是否成功
+####  5. 查看是否成功
 
 	   jps
 	   
@@ -289,34 +296,37 @@ categories: Hadoop
 
 ### 测试Hadoop
 
-##### 1. 查看集群状态
+#### 1. 查看集群状态
         
         /data/hadoop-2.7.5/bin/hdfs dfsadmin -report
    
    ![ ](https://jeffreyxqf.github.io/source/hadoop/report.png)
    
-##### 2. 测试yarn,访问管理界面
+#### 2. 测试YARN
+
+访问管理界面
 
         master:18088/cluster
   
   ![ ](https://jeffreyxqf.github.io/source/hadoop/yarn.png)
     
-##### 3. 测试查看HDFS
+##### 3. 测试HDFS
     
         http://master:50070/dfshealth.html
  
  ![ ](https://jeffreyxqf.github.io/source/hadoop/dfs.png)
  
-#### 安装Hadoop遇到的问题
+### 安装Hadoop遇到的问题
     
-######  1. JAVA_HOME未设置？
+#####  1. JAVA_HOME未设置？
 
 启动的时候报: JAVA_HOME is not set and could not be found
 
 则需要/data/hadoop-2.7.1/etc/hadoop/hadoop-env.sh，添加JAVA_HOME路径
 
-###### 2. slave node ， 运行 yarn 后jps node manager 没有启动 。 
+##### 2. slave node 异常
 
+slave node 运行 yarn 后jps node manager 没有启动
 Log ： 
 
 ![ ](https://jeffreyxqf.github.io/source/hadoop/node error.png)
@@ -325,7 +335,7 @@ Log ：
 
 将yarn.nodemanager.aux-services项的值改为“mapreduce_shuffle”
 
-###### 3. Stop Namenode/datanode 异常
+##### 3. Stop Namenode/datanode 异常
  no xxx to stop
 
  ![ ](https://jeffreyxqf.github.io/source/hadoop/no ** stop.png)
