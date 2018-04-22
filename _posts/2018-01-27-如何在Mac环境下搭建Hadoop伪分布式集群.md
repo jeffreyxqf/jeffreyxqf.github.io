@@ -45,7 +45,7 @@ categories: Hadoop
  
   获取getaway address ： 
   
- ![ ](https://jeffreyxqf.github.io/source/hadoop/VM%20Net.png)
+ ![ ](https://jeffreyxqf.github.io/source/hadoop/Getway.png)
  
   可以看到网关地址为： 192.168.236.2
   
