@@ -2,7 +2,7 @@
 layout: post
 title:  "在Mac环境下搭建Hadoop伪分布式集群"
 date:  2018-01-27 09:12 +0800
-tags: Hadoop 分布式 大数据
+tags: Hadoop 分布式 BigData
 categories: Hadoop
 ---
 最近尝试在mac上搭建Hadoop集群，发现资料不是很多，加之自己也是刚刚接触mac操作系统，对一些操作以及网络配置不是很熟悉，在搭建过程中遇到了一些困难。利用下班后的时间，花了2个晚上终于顺利的将集群搭建了起来，整理了这篇文章，希望可以对读者有所启发。
@@ -12,7 +12,7 @@ categories: Hadoop
 ### 系统环境
 
        本机 ：  MacBook Pro  系统10.13
-        VM ：  VMware FUsion 10.1.0
+       V M ：  VMware FUsion 10.1.0
        Linux： Version 2.6.32-642
        Hadoop: Version 2.7.5
        JDK :   1.8.0_161
@@ -263,6 +263,7 @@ categories: Hadoop
 #####  2. 启动NameNode     
      
         /data/hadoop-2.7.5/sbin/hadoop-daemons.sh start datanode
+	
 #####  3. 启动DataNode
     
         /data/hadoop-2.7.1/sbin/hadoop-daemons.sh start datanode
@@ -327,7 +328,7 @@ Log ：
 ###### 3. Stop Namenode/datanode 异常
  no xxx to stop
 
- ![ ](jeffreyxqf.github.io/source/hadoop/no ** stop.png)
+ ![ ](https://jeffreyxqf.github.io/source/hadoop/no ** stop.png)
  
  http://blog.csdn.net/GYQJN/article/details/50805472
 
