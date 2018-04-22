@@ -271,11 +271,11 @@ categories: Hadoop
 
  ![ ](https://jeffreyxqf.github.io/source/hadoop/start-all.png)
 
-#####  4,运行YARN
+#####  4. 运行YARN
    
     /data/hadoop-2.7.1/sbin/start-all.sh
     
-#####  5，查看是否成功
+#####  5. 查看是否成功
 
 	   jps
 	   
