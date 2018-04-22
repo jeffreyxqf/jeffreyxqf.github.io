@@ -318,7 +318,7 @@ categories: Hadoop
 
 Log ： 
 
-![jeffreyxqf.github.io/source/hadoop/node error.png](jeffreyxqf.github.io/source/hadoop/node error.png)
+![ ](https://jeffreyxqf.github.io/source/hadoop/node error.png)
 
 解决 ： 
 
