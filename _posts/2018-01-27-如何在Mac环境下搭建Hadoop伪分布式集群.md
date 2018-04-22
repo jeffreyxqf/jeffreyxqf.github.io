@@ -51,7 +51,7 @@ categories: Hadoop
   
   当然也可以使用界面配置，如： 
   
- ![jeffreyxqf.github.io/source/hadoop/Linux net configuration.png](jeffreyxqf.github.io/source/hadoop/Linux net configuration.png)
+ ![ ](https://jeffreyxqf.github.io/source/hadoop/Linux net configuration.png)
   
 ##### 3.修改host文件 
 
@@ -68,7 +68,7 @@ categories: Hadoop
    
    测试 ： 
    
-   ![jeffreyxqf.github.io/source/hadoop/ping.png](jeffreyxqf.github.io/source/hadoop/ping.png)
+   ![ ](https://jeffreyxqf.github.io/source/hadoop/ping.png)
    
 可以看到主机与虚拟机，虚拟机之间已实现了互联，自己摸索，不一定是最佳实践哈。。。
 	
@@ -120,7 +120,7 @@ categories: Hadoop
   source /etc/profile 使配置立即生效
   测试 hadoop 
   
-  ![jeffreyxqf.github.io/source/hadoop/hadoop test.png](jeffreyxqf.github.io/source/hadoop/hadoop test.png)
+  ![ ](https://jeffreyxqf.github.io/source/hadoop/hadoop test.png)
   
 #####   4. Hadoop 配置
   
@@ -258,7 +258,7 @@ categories: Hadoop
      
         hadoop namenode -format
      
- ![jeffreyxqf.github.io/source/hadoop/dfs.png](jeffreyxqf.github.io/source/hadoop/dfs.png)
+ ![ ](https://jeffreyxqf.github.io/source/hadoop/dfs.png)
  
 #####  2. 启动NameNode     
      
@@ -268,7 +268,7 @@ categories: Hadoop
         /data/hadoop-2.7.1/sbin/hadoop-daemons.sh start datanode
 当然1，2，3操作可以使用start-dfs.sh
 
- ![jeffreyxqf.github.io/source/hadoop/start-all.png](jeffreyxqf.github.io/source/hadoop/start-all.png)
+ ![ ](https://jeffreyxqf.github.io/source/hadoop/start-all.png)
 
 #####  4,运行YARN
    
@@ -293,12 +293,12 @@ categories: Hadoop
         
         /data/hadoop-2.7.5/bin/hdfs dfsadmin -report
    
-   ![jeffreyxqf.github.io/source/hadoop/report.png](jeffreyxqf.github.io/source/hadoop/report.png)
+   ![ ](https://jeffreyxqf.github.io/source/hadoop/report.png)
 2. 测试yarn,访问管理界面
 
         master:18088/cluster
   
-  ![jeffreyxqf.github.io/source/hadoop/yarn.png](jeffreyxqf.github.io/source/hadoop/yarn.png)
+  ![ ](https://jeffreyxqf.github.io/source/hadoop/yarn.png)
     
 3. 测试查看HDFS
     
@@ -327,7 +327,7 @@ Log ：
 ###### 3. Stop Namenode/datanode 异常
  no xxx to stop
 
- ![](jeffreyxqf.github.io/source/hadoop/no ** stop.png)
+ ![ ](jeffreyxqf.github.io/source/hadoop/no ** stop.png)
  
  http://blog.csdn.net/GYQJN/article/details/50805472
 
