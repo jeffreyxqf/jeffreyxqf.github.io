@@ -257,9 +257,7 @@ categories: Hadoop
 #####  1. 格式化NameNode
      
         hadoop namenode -format
-     
- ![ ](https://jeffreyxqf.github.io/source/hadoop/dfs.png)
- 
+      
 #####  2. 启动NameNode     
      
         /data/hadoop-2.7.5/sbin/hadoop-daemons.sh start datanode
