@@ -145,7 +145,7 @@ categories: Hadoop
   
   修改文件 core-site.xml、hdfs-site.xml、mapred-site.xml、yarn-site.xml以及slaves文件。
   
-######    a. 修改core-site.xml :  
+######    a. 修改 core-site.xml :  
  vim core-site.xml 
 		   
 		<?xml version="1.0" encoding="UTF-8"?>
@@ -176,7 +176,7 @@ categories: Hadoop
 		
    hadoop.tmp.dir 目录设置为上文创建的tmp目录。 
    
-###### b. 修改vim hdfs-site.xml
+###### b. 修改 hdfs-site.xml
    
 	    <?xml version="1.0" encoding="UTF-8"?>
 		 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
@@ -210,7 +210,7 @@ categories: Hadoop
 		</configuration>  
 
 
-######  c. 修改vim yarn-site.xml
+######  c. 修改 yarn-site.xml
 		     
 	    <?xml version="1.0"?>
 		<configuration>
@@ -246,7 +246,7 @@ categories: Hadoop
 				</property>
 		</configuration>
 
-######   d. 修改vim mapred-site.xml
+######   d. 修改 mapred-site.xml
       
 		<?xml version="1.0"?>
 		<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
