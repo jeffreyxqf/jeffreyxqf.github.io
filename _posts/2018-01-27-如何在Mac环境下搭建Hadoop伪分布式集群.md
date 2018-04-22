@@ -5,10 +5,6 @@ date:  2018-01-27 09:12 +0800
 tags: Hadoop 分布式 BigData
 categories: Hadoop
 ---
-
-* content
-{:toc}
-
 最近尝试在mac上搭建Hadoop集群，发现资料不是很多，加之自己也是刚刚接触mac操作系统，对一些操作以及网络配置不是很熟悉，在搭建过程中遇到了一些困难。利用下班后的时间，花了2个晚上终于顺利的将集群搭建了起来，整理了这篇文章，希望可以对读者有所启发。
 
 ---
@@ -27,7 +23,7 @@ categories: Hadoop
 
        
 ### 系统准备
-#### VMware与Linux集群系统安装
+#### 集群系统安装
 
 在VMware上安装3台虚拟机，即一个master主机，2个slave。安装过程比较简单，在此就不详细叙述了。 不过需要注意的是，在安装虚拟机的过程中，启动时可能会出现了cannot find /dev/common 等类似的错误，Google了下，可能缘于VMware版本与mac操作系统不兼容导致的Linux安装不成功的问题，本人使用了最新版的VMware 10.1.0 版本 以及Linux 2.6版本安装成功。
 
@@ -90,8 +86,11 @@ categories: Hadoop
 	export CLASSPATH=$JAVA_HOME/lib:$JAVA_HOME/jre/lib
 	export PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin    
 	
-##### 3. 重新加载/etc/profile,使配置立即生效
-     source /etc/profile
+##### 3. 重载配置
+
+重新加载/etc/profile,使配置立即生效
+    
+      source /etc/profile
      
 ##### 4. 测试
     echo $PATH
@@ -108,7 +107,7 @@ categories: Hadoop
 
 链接:[https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg](https://pan.baidu.com/s/1g3Bg5y8nvxiS2gkNTGksvg) 密码:99c7
     
-#####  2. 创建工作目录，方便管理NameNode/DataNode/以及零时文件
+#####  2. 创建工作目录
 
 创建工作目录，方便管理NameNode/DataNode/以及零时文件
 
@@ -320,15 +319,17 @@ categories: Hadoop
  
  ![ ](https://jeffreyxqf.github.io/source/hadoop/dfs.png)
  
-### 安装Hadoop遇到的问题
+### 安装问题
     
+在搭建过程中，遇到了很多的问题，在查阅相关资料后都得到了解决。 以下三条应该是比较常见的错误，在此罗列出来为今后遇到类似问题提供借鉴。
+
 #####  1. JAVA_HOME未设置？
 
 启动的时候报: JAVA_HOME is not set and could not be found
 
 则需要/data/hadoop-2.7.1/etc/hadoop/hadoop-env.sh，添加JAVA_HOME路径
 
-##### 2. slave node 异常
+##### 2. Slave Node 异常
 
 slave node 运行 yarn 后jps node manager 没有启动
 Log ： 
@@ -339,7 +340,7 @@ Log ：
 
 将yarn.nodemanager.aux-services项的值改为“mapreduce_shuffle”
 
-##### 3. Stop Namenode/datanode 异常
+##### 3. Stop Node 异常
  no xxx to stop
 
  ![ ](https://jeffreyxqf.github.io/source/hadoop/no ** stop.png)
@@ -348,8 +349,7 @@ Log ：
 
 
 
-
-参考资料：
+### 参考资料：
 
 [docs.hortonworks.com](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.3.0/bk_installing_manually_book/content/ch_setting_up_hadoop_configuration_chapter.html)
 
