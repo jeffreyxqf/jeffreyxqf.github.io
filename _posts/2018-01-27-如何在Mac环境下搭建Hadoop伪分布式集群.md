@@ -330,7 +330,7 @@ Log ：
 
  ![ ](https://jeffreyxqf.github.io/source/hadoop/no ** stop.png)
  
- http://blog.csdn.net/GYQJN/article/details/50805472
+ [http://blog.csdn.net/GYQJN/article/details/50805472](http://blog.csdn.net/GYQJN/article/details/50805472)
 
 
 
