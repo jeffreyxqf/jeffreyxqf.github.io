@@ -37,6 +37,7 @@ categories: Hadoop
  nat模式 固定ip配置 
  
 ##### 1.本机操作
+
  VMware安装完成后，在本机终端找到其对应的网络配置：
  
  ![ ](https://jeffreyxqf.github.io/source/hadoop/VM%20Net.png)
@@ -51,7 +52,11 @@ categories: Hadoop
   
 ##### 2.虚拟机操作 ：
   
-  静态ip地址设置（在虚拟机上完成），可以看到，master虚拟机ip地址设置成192.168.236.100
+  静态ip地址设置（在虚拟机上完成）：
+  
+  ![ ](https://jeffreyxqf.github.io/source/hadoop/networking.png)
+  
+  可以看到，master虚拟机ip地址设置成192.168.236.100
   Getaway与主机相同。 两个slaves ip地址分别设置为192.168.236.101，192.168.236.102.
   
   当然也可以使用界面配置，如： 
