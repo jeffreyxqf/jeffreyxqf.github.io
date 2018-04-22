@@ -34,13 +34,13 @@ categories: Hadoop
 ##### 1.本机操作
  VMware安装完成后，在本机终端找到其对应的网络配置：
  
- ![ ](https://github.com/jeffreyxqf/jeffreyxqf.github.io/blob/master/source/hadoop/VM%20Net.png)
+ ![ ](https://jeffreyxqf.github.io/source/hadoop/VM%20Net.png)
 
  可以看到VMnet8 子网IP地址为：192.168.236.0
  
   获取getaway address ： 
   
- ![ ](https://github.com/jeffreyxqf/jeffreyxqf.github.io/blob/master/source/hadoop/VM%20Net.png)
+ ![ ](https://jeffreyxqf.github.io/source/hadoop/VM%20Net.png)
  
   可以看到网关地址为： 192.168.236.2
   
