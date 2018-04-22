@@ -304,7 +304,7 @@ categories: Hadoop
     
         http://master:50070/dfshealth.html
  
- ![](jeffreyxqf.github.io/source/hadoop/dfs.png)
+ ![ ](https://jeffreyxqf.github.io/source/hadoop/dfs.png)
  
 #### 安装Hadoop遇到的问题
     
