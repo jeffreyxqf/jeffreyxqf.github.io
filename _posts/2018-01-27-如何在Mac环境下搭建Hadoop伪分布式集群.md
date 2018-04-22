@@ -136,27 +136,27 @@ categories: Hadoop
 		<?xml version="1.0" encoding="UTF-8"?>
 		<?xml-stylesheet type="text/xsl" href="configuration.xsl">
 		<configuration>
-		<property>
-		<name>hadoop.tmp.dir</name>
-		<value>file:/data/hdfs/tmp</value>
-		<description>A base for other temporary directories.</description>
-		</property>
-		<property>
-		 <name>io.file.buffer.size</name>
-		 <value>131072</value>
-		</property>
-		<property>
-		 <name>fs.default.name</name>
-		 <value>hdfs://master:9000</value>
-		</property>
-		<property>
-		 <name>hadoop.proxyuser.root.hosts</name>
-		 <value>*</value>
-		</property>
-		<property>
-		 <name>hadoop.proxyuser.root.groups</name>
-		 <value>*</value>
-		</property>
+				<property>
+				<name>hadoop.tmp.dir</name>
+				<value>file:/data/hdfs/tmp</value>
+				<description>A base for other temporary directories.</description>
+				</property>
+				<property>
+				 <name>io.file.buffer.size</name>
+				 <value>131072</value>
+				</property>
+				<property>
+				 <name>fs.default.name</name>
+				 <value>hdfs://master:9000</value>
+				</property>
+				<property>
+				 <name>hadoop.proxyuser.root.hosts</name>
+				 <value>*</value>
+				</property>
+				<property>
+				 <name>hadoop.proxyuser.root.groups</name>
+				 <value>*</value>
+				</property>
 		</configuration> 
 		
    hadoop.tmp.dir 目录设置为上文创建的tmp目录。 
@@ -201,34 +201,34 @@ categories: Hadoop
 		<configuration>
 		
 		<!-- Site specific YARN configuration properties -->
-		<property>
-		<name>yarn.resourcemanager.address</name>
-		  <value>master:18040</value>
-		</property>
-		<property>
-		  <name>yarn.resourcemanager.scheduler.address</name>
-		  <value>master:18030</value>
-		</property>
-		<property>
-		  <name>yarn.resourcemanager.webapp.address</name>
-		  <value>master:18088</value>
-		</property>
-		<property>
-		  <name>yarn.resourcemanager.resource-tracker.address</name>
-		  <value>master:18025</value>
-		</property>
-		<property>
-		  <name>yarn.resourcemanager.admin.address</name>
-		  <value>master:18141</value>
-		</property>
-		<property>
-		  <name>yarn.nodemanager.aux-services</name>
-		  <value>mapreduce_shuffle</value>
-		</property>
-		<property>
-		  <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
-		  <value>org.apache.hadoop.mapred.ShuffleHandler</value>
-		</property>
+				<property>
+				<name>yarn.resourcemanager.address</name>
+				  <value>master:18040</value>
+				</property>
+				<property>
+				  <name>yarn.resourcemanager.scheduler.address</name>
+				  <value>master:18030</value>
+				</property>
+				<property>
+				  <name>yarn.resourcemanager.webapp.address</name>
+				  <value>master:18088</value>
+				</property>
+				<property>
+				  <name>yarn.resourcemanager.resource-tracker.address</name>
+				  <value>master:18025</value>
+				</property>
+				<property>
+				  <name>yarn.resourcemanager.admin.address</name>
+				  <value>master:18141</value>
+				</property>
+				<property>
+				  <name>yarn.nodemanager.aux-services</name>
+				  <value>mapreduce_shuffle</value>
+				</property>
+				<property>
+				  <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+				  <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+				</property>
 		</configuration>
 
 ######   d. 修改vim mapred-site.xml
@@ -238,10 +238,10 @@ categories: Hadoop
 		<!-- Put site-specific property overrides in this file. -->
 		<configuration>
 		
-		<property>
-		  <name>mapreduce.framework.name</name>
-		  <value>yarn</value>
-		</property>
+				<property>
+				  <name>mapreduce.framework.name</name>
+				  <value>yarn</value>
+				</property>
 		
 		</configuration>
 
@@ -289,19 +289,19 @@ categories: Hadoop
 
 ### 测试Hadoop
 
-1. 查看集群状态
+##### 1. 查看集群状态
         
         /data/hadoop-2.7.5/bin/hdfs dfsadmin -report
    
    ![ ](https://jeffreyxqf.github.io/source/hadoop/report.png)
    
-2. 测试yarn,访问管理界面
+##### 2. 测试yarn,访问管理界面
 
         master:18088/cluster
   
   ![ ](https://jeffreyxqf.github.io/source/hadoop/yarn.png)
     
-3. 测试查看HDFS
+##### 3. 测试查看HDFS
     
         http://master:50070/dfshealth.html
  
