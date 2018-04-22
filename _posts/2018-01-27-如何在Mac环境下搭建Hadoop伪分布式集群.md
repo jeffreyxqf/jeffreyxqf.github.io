@@ -267,6 +267,7 @@ categories: Hadoop
 #####  3. 启动DataNode
     
         /data/hadoop-2.7.1/sbin/hadoop-daemons.sh start datanode
+	
 当然1，2，3操作可以使用start-dfs.sh
 
  ![ ](https://jeffreyxqf.github.io/source/hadoop/start-all.png)
@@ -295,6 +296,7 @@ categories: Hadoop
         /data/hadoop-2.7.5/bin/hdfs dfsadmin -report
    
    ![ ](https://jeffreyxqf.github.io/source/hadoop/report.png)
+   
 2. 测试yarn,访问管理界面
 
         master:18088/cluster
