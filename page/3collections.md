@@ -62,6 +62,7 @@ Hadoop in action
 - MacDown （一款不错的mac开源markdown编写工具）
 
 - TotalFinder (mac 使用很好的文件管理软件)
+- Securecrt   [ Download & Brk]  (https://blog.csdn.net/lzwglory/article/details/73650901)
 
 ## 编程语言
 - JAVA
