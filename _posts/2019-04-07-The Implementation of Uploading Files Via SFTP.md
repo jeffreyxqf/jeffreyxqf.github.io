@@ -10,6 +10,13 @@ comments: true
 
 项目中需要上传文件至远程服务器，本文主要介绍了通过单例方式实现SFTP协议，达到同步文件至远程Sever的目的。
 
+
+
+
+
+
+
+
 ```java
 public class SFTPClient {
 
