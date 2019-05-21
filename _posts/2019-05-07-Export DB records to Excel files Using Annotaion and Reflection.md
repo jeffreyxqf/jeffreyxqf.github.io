@@ -173,4 +173,9 @@ public class GenerateExcel {
 
 
 
-note ： 因项目数据量较大可以达到几十甚至数百万条记录，而且需要生成至一个sheet中。HSSFWorkbook 主要是用来操作Excel2003以前（包括2003）的版本，扩展名是.xls。
+note ： 因项目数据量较大可以达到几十甚至数百万条记录，而且需要生成至一个sheet中。而HSSFWorkbook 主要是用来操作Excel2003以前（包括2003）的版本，扩展名是.xls，一个sheet中最大支持65535条记录。推荐所用SXSSF API，其支持2007以后的版本，记录数量级较大，占用内存较小。
+
+
+
+<https://poi.apache.org/components/spreadsheet/>
+
